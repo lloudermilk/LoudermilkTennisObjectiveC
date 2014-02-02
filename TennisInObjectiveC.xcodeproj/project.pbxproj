@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0500A99E189EF13F00594614 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500A99D189EF13F00594614 /* Match.m */; };
+		0500A9A1189EF16C00594614 /* MatchScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0500A9A0189EF16C00594614 /* MatchScore.m */; };
 		051EE42B189ED21A002A3A85 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 051EE42A189ED21A002A3A85 /* Set.m */; };
 		051EE42E189ED247002A3A85 /* SetScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 051EE42D189ED247002A3A85 /* SetScore.m */; };
 		051EE431189ED265002A3A85 /* TieBreaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 051EE430189ED265002A3A85 /* TieBreaker.m */; };
@@ -44,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0500A99C189EF13F00594614 /* Match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
+		0500A99D189EF13F00594614 /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
+		0500A99F189EF16C00594614 /* MatchScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchScore.h; sourceTree = "<group>"; };
+		0500A9A0189EF16C00594614 /* MatchScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchScore.m; sourceTree = "<group>"; };
 		051EE429189ED21A002A3A85 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
 		051EE42A189ED21A002A3A85 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
 		051EE42C189ED247002A3A85 /* SetScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetScore.h; sourceTree = "<group>"; };
@@ -206,6 +212,10 @@
 				051EE430189ED265002A3A85 /* TieBreaker.m */,
 				051EE432189ED284002A3A85 /* TieBreakerScore.h */,
 				051EE433189ED284002A3A85 /* TieBreakerScore.m */,
+				0500A99C189EF13F00594614 /* Match.h */,
+				0500A99D189EF13F00594614 /* Match.m */,
+				0500A99F189EF16C00594614 /* MatchScore.h */,
+				0500A9A0189EF16C00594614 /* MatchScore.m */,
 			);
 			name = "Tennis Files";
 			sourceTree = "<group>";
@@ -314,8 +324,10 @@
 				3E9337E81890DBD800A0AFC0 /* PointScore.m in Sources */,
 				3E9337DC1890CDAD00A0AFC0 /* Score.m in Sources */,
 				3E9337E51890D9D100A0AFC0 /* Competition.m in Sources */,
+				0500A9A1189EF16C00594614 /* MatchScore.m in Sources */,
 				3E9337DF1890D69200A0AFC0 /* Game.m in Sources */,
 				051EE434189ED284002A3A85 /* TieBreakerScore.m in Sources */,
+				0500A99E189EF13F00594614 /* Match.m in Sources */,
 				3E9337B21890C2F000A0AFC0 /* AppDelegate.m in Sources */,
 				3E9337AE1890C2F000A0AFC0 /* main.m in Sources */,
 				051EE42B189ED21A002A3A85 /* Set.m in Sources */,

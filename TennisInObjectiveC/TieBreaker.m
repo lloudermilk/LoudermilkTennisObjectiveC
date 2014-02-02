@@ -24,6 +24,7 @@
 
 -(Score *) play:(Player *)player
 {
+    bool shouldSwitch = false;
     PointScore *tieScore =(PointScore *) [player serveAPoint];
     [tieScore addScore: [tieScore getWinner]];
     
@@ -33,10 +34,9 @@
     while(![tieScore haveAWinner]) {
         
         [tieScore addScore: [tieScore getWinner]];
-        int val = 1;
-        if (val % 2 == 0)
+        if (shouldSwitch)
             player = [Player otherPlayer:player];
-        val++;
+        shouldSwitch = !shouldSwitch;
         
     }
     return tieScore;

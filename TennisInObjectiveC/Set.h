@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Player.h"
 #import "Competition.h"
 
 @interface Set : Competition

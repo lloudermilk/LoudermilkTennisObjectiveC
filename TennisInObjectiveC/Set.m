@@ -8,12 +8,10 @@
 
 #import "Set.h"
 #import "SetScore.h"
-#import "PointScore.h"
 #import "Game.h"
 #import "GameScore.h"
 #import "TieBreaker.h"
 #import "TieBreakerScore.h"
-#import "Player.h"
 
 @implementation Set
 
@@ -29,26 +27,17 @@
     SetScore *setScore = [[SetScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
     
     while(![setScore haveAWinner]) {
-        
         Game *game = [[Game alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
-        
         Score *gameScore = [game play:(player)];
-        
         [setScore addScore: [gameScore getWinner]];
         
         game = nil;
-        
         player = [Player otherPlayer:player];
-        
         if ([setScore shouldPlayATieBreaker]){
-            
             TieBreaker *tie = [[TieBreaker alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
-            
             [setScore addTieScore: (TieBreakerScore *)[tie play:(player)]];
-            
             break;
         }
-        
     }
     return setScore;
 }
