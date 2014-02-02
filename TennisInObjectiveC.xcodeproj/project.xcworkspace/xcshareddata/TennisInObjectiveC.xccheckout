@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EAA7F74A-046F-40CF-9C04-876B474206C1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TennisInObjectiveC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F3CA5996-8FC8-40AC-858B-F4D7805181CA</key>
+		<string>https://github.com/lloudermilk/LoudermilkTennisObjectiveC.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TennisInObjectiveC.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F3CA5996-8FC8-40AC-858B-F4D7805181CA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lloudermilk/LoudermilkTennisObjectiveC.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F3CA5996-8FC8-40AC-858B-F4D7805181CA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F3CA5996-8FC8-40AC-858B-F4D7805181CA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LoudermilkTennisObjectiveC</string>
+		</dict>
+	</array>
+</dict>
+</plist>

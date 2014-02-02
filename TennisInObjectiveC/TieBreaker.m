@@ -24,18 +24,15 @@
 
 -(Score *) play:(Player *)player
 {
-    TieBreakerScore *tieScore = [[TieBreakerScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
-    
-    // might be wrong, placement of (PointScore *)
-    // tieScore->addScore(reinterpret_cast<PointScore *>(p->serveAPoint())->getWinner());
-    [tieScore addScore: [(PointScore *)[player serveAPoint] getWinner]];
+    PointScore *tieScore =(PointScore *) [player serveAPoint];
+    [tieScore addScore: [tieScore getWinner]];
     
     player = [Player otherPlayer:player];
     
     
     while(![tieScore haveAWinner]) {
         
-        [tieScore addScore: [(PointScore *)[player serveAPoint] getWinner]];
+        [tieScore addScore: [tieScore getWinner]];
         int val = 1;
         if (val % 2 == 0)
             player = [Player otherPlayer:player];
