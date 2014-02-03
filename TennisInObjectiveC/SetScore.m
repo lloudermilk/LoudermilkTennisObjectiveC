@@ -33,15 +33,10 @@
 }
 
 -(NSString *) description{
-    NSLog(@"SetScore... printing begins.");
-    NSLog(@"p1 score = %d", self.player1Score);
-    NSLog(@"p2 score = %d", self.player2Score);
-    NSLog(@"SetScore... printing ends.");
+    NSLog(@"%d         %d           ",self.player1Score, self.player2Score);
+    if( self.tieScore != nil)
+        NSLog(@"%@",[self.tieScore description]);
     
-    NSLog(@"\n\nplayer1 score = %d\nplayer2 score = %d\n\n", self.player1Score, self.player2Score);
-    
-    if (_tieScore != nil)
-        [_tieScore description];
     return 0;
 }
 

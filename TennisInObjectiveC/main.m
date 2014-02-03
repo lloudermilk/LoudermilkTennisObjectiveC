@@ -19,7 +19,7 @@ int main(int argc, char * argv[])
 {
     @autoreleasepool {
         srandom(19);
-        Player *player1 = [[Player alloc] initWithProbability: 50];
+        Player *player1 = [[Player alloc] initWithProbability: 30];
         Player *player2 = [[Player alloc] initWithProbability: 70];
         
         Match *match = [[Match alloc] initWithFirstPlayer:player1 secondPlayer:player2];

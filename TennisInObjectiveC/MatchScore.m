@@ -15,6 +15,7 @@
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2{
     if((self = [super initWithFirstPlayer:p2 secondPlayer:p2]) == nil)
         return nil;
+    self.scores = [[NSMutableArray alloc] init];
     return self;
 }
 

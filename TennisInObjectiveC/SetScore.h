@@ -19,6 +19,4 @@
 -(BOOL) shouldPlayATieBreaker;
 -(NSString *) description;
 
-
-
 @end
