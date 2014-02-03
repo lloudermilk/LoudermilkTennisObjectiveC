@@ -23,8 +23,8 @@
 }
 
 -(NSString *) description{
-    NSLog(@"(tie breaker %d - %d)", self.player1Score, self.player2Score);
-    return 0;
+    NSString * str = [[NSString alloc] initWithFormat: @"(tie breaker %d - %d)", self.player1Score, self.player2Score];
+    return str;
 }
 
 @end

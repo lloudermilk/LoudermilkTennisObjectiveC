@@ -30,22 +30,18 @@
 }
 
 -(NSString *) description {
-    //Same format as the print from tennis.cpp and MatchScore.cpp from Phase 1
-    NSLog(@"Set No.   Player A     Player B\n");
-    
+    NSString * str = [[NSString alloc] initWithFormat:@"Set No.   Player A     Player B\n"];
     for( int i = 0; i < _setNumber; i++ ){
-        NSString * temp = [[NSString alloc] initWithFormat:@"%d       %@\n", i+1, [self.scores objectAtIndex:1]];
-        NSLog(@"%@", temp);
+        NSString * temp = [[NSString alloc] initWithFormat:@"%d       %@\n", i+1, [self.scores description]];
+        str = [str stringByAppendingString:temp];
     }
 
-    
     if(self.player1Score > self.player2Score)
-        NSLog(@"Player A wins the match %d sets to %d\n", self.player1Score, self.player2Score);
+        str = [str stringByAppendingString: [[NSString alloc] initWithFormat: @"Player A wins the match %d sets to %d\n", self.player1Score, self.player2Score]];
     else
-        NSLog(@"Player B wins the match %d sets to %d\n", self.player2Score, self.player1Score);
+       str = [str stringByAppendingString: [[NSString alloc] initWithFormat: @"Player B wins the match %d sets to %d\n", self.player2Score, self.player1Score]];
     
-    //Returning 0 instead of a string because I used NSLog
-    return 0;
+    return str;
 }
 
 @end

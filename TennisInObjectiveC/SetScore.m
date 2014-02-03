@@ -31,10 +31,10 @@
 }
 
 -(NSString *) description{
-    NSLog(@"%d         %d  ",self.player1Score, self.player2Score);
+    NSString * str = [[NSString alloc] initWithFormat:@"%d         %d  ",self.player1Score, self.player2Score];
     if(self.tieBreakerScore != nil)
-        NSLog(@"%@",[self.tieBreakerScore description]);
-    return 0;
+        str = [str stringByAppendingString:[[NSString alloc] initWithFormat:@"%@",[self.tieBreakerScore description]]];
+    return str;
 }
 
 @end
