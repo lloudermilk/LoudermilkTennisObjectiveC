@@ -30,10 +30,11 @@
 }
 
 -(NSString *) description {
-    NSString * str = [[NSString alloc] initWithFormat:@"Set No.   Player A     Player B\n"];
+    NSString * str = @"\nSet No.   Player A     Player B\n";
     for( int i = 0; i < _setNumber; i++ ){
-        NSString * temp = [[NSString alloc] initWithFormat:@"%d       %@\n", i+1, [self.scores description]];
+        NSString * temp = [[NSString alloc] initWithFormat:@"%d         %@\n", i+1, [self.scores[i] description]];
         str = [str stringByAppendingString:temp];
+        temp = nil;
     }
 
     if(self.player1Score > self.player2Score)

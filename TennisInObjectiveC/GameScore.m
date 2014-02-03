@@ -20,9 +20,4 @@
     return (self.player1Score >= 4 || self.player2Score >= 4) && abs( self.player1Score - self.player2Score) >= 2;
 }
 
--(NSString *) description{
-    NSString * str = [[NSString alloc] init];
-    return str;
-}
-
 @end

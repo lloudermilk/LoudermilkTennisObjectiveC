@@ -15,10 +15,5 @@
     return self.player1Score == 1 || self.player2Score == 1;
 }
 
--(NSString *) description{
-    NSString * str = [[NSString alloc] init];
-    return str;
-}
-
 
 @end

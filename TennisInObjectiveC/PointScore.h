@@ -12,6 +12,5 @@
 @interface PointScore : Score
 
 -(BOOL) haveAWinner;
--(NSString *) description;
 
 @end
