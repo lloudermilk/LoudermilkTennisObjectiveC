@@ -23,11 +23,11 @@
 
 -(Score *) play:(Player *)player{
     bool shouldSwitch = false;
-    PointScore *score =(PointScore *) [player serveAPoint];
-    [score addScore: [score getWinner]];
+    TieBreakerScore * score = [[TieBreakerScore alloc] initWithFirstPlayer: self.player1 secondPlayer: self.player2];
+    [score addScore: [[player serveAPoint] getWinner]];
     player = [Player otherPlayer:player];
     while(![score haveAWinner]) {
-        [score addScore: [score getWinner]];
+        [score addScore:[[player serveAPoint] getWinner]];
         if (shouldSwitch)
             player = [Player otherPlayer:player];
         shouldSwitch = !shouldSwitch;

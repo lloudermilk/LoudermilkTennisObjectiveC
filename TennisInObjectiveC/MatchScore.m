@@ -33,16 +33,14 @@
     
     for( int i = 0; i < _setNumber; i++ ) {
         NSLog(@"%d", i+1);
-        [_scores[i] description];
+        NSLog(@"%@", [self.scores objectAtIndex:i]);
     }
-    
-    if ( self.player1Score > self.player2Score ) {
+
+    if ( self.player1Score > self.player2Score )
         NSLog(@"\nPlayer A wins the match %d sets to %d \n", self.player1Score, self.player2Score);
-    }
-    
-    else{
+    else
         NSLog(@"\nPlayer B wins the match %d sets to %d \n", self.player2Score, self.player1Score);
-    }
+    
     return 0;
 }
 

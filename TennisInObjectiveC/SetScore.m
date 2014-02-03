@@ -38,10 +38,11 @@
     NSLog(@"p2 score = %d", self.player2Score);
     NSLog(@"SetScore... printing ends.");
     
-    return [NSString stringWithFormat:@"\n\nplayer1 score = %d\nplayer2 score = %d\n\n", self.player1Score, self.player2Score ];
+    NSLog(@"\n\nplayer1 score = %d\nplayer2 score = %d\n\n", self.player1Score, self.player2Score);
     
     if (_tieScore != nil)
         [_tieScore description];
+    return 0;
 }
 
 @end

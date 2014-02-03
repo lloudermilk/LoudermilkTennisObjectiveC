@@ -28,14 +28,13 @@
     
     while(![setScore haveAWinner]) {
         Game *game = [[Game alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
-        Score *gameScore = [game play:(player)];
+        Score *gameScore = [game play:player];
         [setScore addScore: [gameScore getWinner]];
         
-        game = nil;
         player = [Player otherPlayer:player];
         if ([setScore shouldPlayATieBreaker]){
-            TieBreaker *tie = [[TieBreaker alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
-            [setScore addTieScore: (TieBreakerScore *)[tie play:(player)]];
+            TieBreaker *tiebreaker = [[TieBreaker alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
+            [setScore addTieScore: (TieBreakerScore *)[tiebreaker play:(player)]];
             break;
         }
     }
