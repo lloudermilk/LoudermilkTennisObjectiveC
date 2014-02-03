@@ -27,13 +27,13 @@
 
 -(void) addTieBreakerScore: (TieBreakerScore *) score{;
     [self addScore: [score getWinner]];
-    self.tieScore = score;
+    self.tieBreakerScore = score;
 }
 
 -(NSString *) description{
-    NSLog(@"%d         %d           ",self.player1Score, self.player2Score);
-    if(self.tieScore != nil)
-        NSLog(@"%@",[self.tieScore description]);
+    NSLog(@"%d         %d  ",self.player1Score, self.player2Score);
+    if(self.tieBreakerScore != nil)
+        NSLog(@"%@",[self.tieBreakerScore description]);
     return 0;
 }
 

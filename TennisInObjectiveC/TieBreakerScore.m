@@ -23,7 +23,7 @@
 }
 
 -(NSString *) description{
-    NSLog(@"\t    (tie breaker %d - %d)", self.player1Score, self.player2Score);
+    NSLog(@"(tie breaker %d - %d)", self.player1Score, self.player2Score);
     return 0;
 }
 
