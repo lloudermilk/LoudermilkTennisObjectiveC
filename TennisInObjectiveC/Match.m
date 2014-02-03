@@ -21,16 +21,15 @@
 }
 
 -(Score *) play:(Player *)player{
-    Score *matchScore = [[MatchScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
+    MatchScore *matchScore = [[MatchScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
     
     while(![matchScore haveAWinner]) {
         Set *set = [[Set alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
         Score *setScore = [set play:(player)];
-        [matchScore addScore: [setScore getWinner]];
+        [matchScore addScore: setScore];
         player = [Player otherPlayer:player];
         
     }
     return matchScore;
 }
-
 @end

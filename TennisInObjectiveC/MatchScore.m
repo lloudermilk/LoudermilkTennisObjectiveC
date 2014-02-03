@@ -19,7 +19,7 @@
 }
 
 -(void) addScore: (Score *) score{
-    [self.scores addObject: (SetScore *)score];
+    self.scores[_setNumber] = (SetScore* ) score;
     score.getWinner == self.player1 ? self.player1Score++ : self.player2Score++;
     self.setNumber++;
 }
