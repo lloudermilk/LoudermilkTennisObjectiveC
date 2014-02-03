@@ -26,8 +26,7 @@ BOOL debug = YES;
 
 @implementation Player
 
--(instancetype) initWithProbability:(int) prob
-{
+-(instancetype) initWithProbability:(int) prob{
     if( (self = [super init]) == nil )
         return nil;
     [self setProbabilityOfWinningAServe: prob];
@@ -42,8 +41,7 @@ BOOL debug = YES;
     return self;
 }
 
--(Score *) serveAPoint
-{
+-(Score *) serveAPoint{
     if( playersIdx != MAX_PLAYERS ) {
         NSLog(@"%@::%@ You need two players to play this game.", self.class, NSStringFromSelector(_cmd));
         exit(1);
@@ -56,13 +54,11 @@ BOOL debug = YES;
     return score;
 }
 
-+(Player *) otherPlayer:(Player *)player
-{
++(Player *) otherPlayer:(Player *)player{
     return players[(player.myPlayerIdx + 1) % 2];
 }
 
--(int) getARandomNumber
-{
+-(int) getARandomNumber{
     return random() % 100 + 1;
 }
 

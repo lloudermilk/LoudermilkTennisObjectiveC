@@ -14,27 +14,19 @@
 
 @implementation Match
 
--(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2
-{
+-(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2{
     if( (self = [super initWithFirstPlayer:p1 secondPlayer:p2] ) == nil )
         return nil;
     return self;
 }
 
--(Score *) play:(Player *)player
-{
+-(Score *) play:(Player *)player{
     Score *matchScore = [[MatchScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
     
     while(![matchScore haveAWinner]) {
-        
         Set *set = [[Set alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
-        
         Score *setScore = [set play:(player)];
-        
         [matchScore addScore: [setScore getWinner]];
-        
-        //set = nil;
-        
         player = [Player otherPlayer:player];
         
     }

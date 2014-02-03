@@ -13,33 +13,26 @@
 
 
 
--(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2
-{
-    if( (self = [super initWithFirstPlayer:p1 secondPlayer:p2   ]) == nil)
+-(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2{
+    if((self = [super initWithFirstPlayer:p1 secondPlayer:p2]) == nil)
         return nil;
     return self;
 }
 
--(BOOL) haveAWinner
-{
+-(BOOL) haveAWinner{
     return (self.player1Score >= 6 || self.player2Score >= 6) && abs( self.player1Score - self.player2Score) >= 2;
 }
 
--(BOOL) shouldPlayATieBreaker
-{
+-(BOOL) shouldPlayATieBreaker{
     return (self.player1Score == 6 && self.player2Score == 6);
 }
 
--(void) addTieScore: (TieBreakerScore *) score
-{
-addScore: [score getWinner];
+-(void) addTieScore: (TieBreakerScore *) score{
+    addScore: [score getWinner];
     self.tieScore = score;
 }
 
-
-
--(NSString *) description
-{
+-(NSString *) description{
     NSLog(@"SetScore... printing begins.");
     NSLog(@"p1 score = %d", self.player1Score);
     NSLog(@"p2 score = %d", self.player2Score);

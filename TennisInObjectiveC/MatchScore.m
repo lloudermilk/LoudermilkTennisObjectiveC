@@ -19,27 +19,23 @@ SetScore *scores[5];
 
 @implementation MatchScore
 
--(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2
-{
+-(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2{
     if( (self = [super initWithFirstPlayer:p2 secondPlayer:p2   ]) == nil)
         return nil;
     return self;
 }
 
--(void) addScore: (Score *) score
-{
+-(void) addScore: (Score *) score{
     scores[_setNumber] = (SetScore*)score;
     _setNumber++;
     [score getWinner] == self.player1 ? self.player1Score++ : self.player2Score++;
 }
 
--(BOOL) haveAWinner
-{
+-(BOOL) haveAWinner{
     return (self.player1Score == 3 || self.player2Score == 3);
 }
 
--(NSString *) description
-{
+-(NSString *) description{
     NSLog(@"   Set No.    Player A     Player B\n");
     for( int i = 0; i < _setNumber; i++ )
     {
@@ -49,7 +45,7 @@ SetScore *scores[5];
     }
     
     if (self.player1Score > self.player2Score)
-        NSLog( @"\nPlayer A wins the match %d sets to %d\n.", self.player1Score, self.player2Score);
+        NSLog(@"\nPlayer A wins the match %d sets to %d\n.", self.player1Score, self.player2Score);
     else
         NSLog(@"\nPlayer B wins the match %d sets to %d\n.", self.player2Score, self.player1Score);
     

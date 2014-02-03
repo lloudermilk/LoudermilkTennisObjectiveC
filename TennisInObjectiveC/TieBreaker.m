@@ -15,30 +15,24 @@
 @implementation TieBreaker
 
 
--(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2
-{
-    if( (self = [super initWithFirstPlayer:p1 secondPlayer:p2] ) == nil )
+-(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2{
+    if((self =[super initWithFirstPlayer:p1 secondPlayer:p2]) == nil)
         return nil;
     return self;
 }
 
--(Score *) play:(Player *)player
-{
+-(Score *) play:(Player *)player{
     bool shouldSwitch = false;
-    PointScore *tieScore =(PointScore *) [player serveAPoint];
-    [tieScore addScore: [tieScore getWinner]];
-    
+    PointScore *score =(PointScore *) [player serveAPoint];
+    [score addScore: [score getWinner]];
     player = [Player otherPlayer:player];
-    
-    
-    while(![tieScore haveAWinner]) {
-        
-        [tieScore addScore: [tieScore getWinner]];
+    while(![score haveAWinner]) {
+        [score addScore: [score getWinner]];
         if (shouldSwitch)
             player = [Player otherPlayer:player];
         shouldSwitch = !shouldSwitch;
         
     }
-    return tieScore;
+    return score;
 }
 @end
