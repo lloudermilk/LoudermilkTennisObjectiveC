@@ -10,8 +10,6 @@
 
 #import "AppDelegate.h"
 #import "Player.h"
-#import "Game.h"
-#import "GameScore.h"
 #import "Match.h"
 #import "MatchScore.h"
 

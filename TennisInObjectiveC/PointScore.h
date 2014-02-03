@@ -11,4 +11,6 @@
 
 @interface PointScore : Score
 
+-(BOOL) haveAWinner;
+
 @end

@@ -16,7 +16,7 @@
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2
 {
-    if( (self = [super init]) == nil )
+    if((self = [super init]) == nil)
         return nil;
     self.player1 = p1;
     self.player2 = p2;

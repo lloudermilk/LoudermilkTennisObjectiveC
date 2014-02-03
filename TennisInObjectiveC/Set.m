@@ -15,6 +15,7 @@
 
 @implementation Set
 
+//Taken from Game.m
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2
 {
     if( (self = [super initWithFirstPlayer:p1 secondPlayer:p2] ) == nil )
@@ -22,6 +23,7 @@
     return self;
 }
 
+//Adapted from Play function in Set.cpp from Phase 1
 -(Score *) play:(Player *)player
 {
     SetScore *setScore = [[SetScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
@@ -34,7 +36,7 @@
         player = [Player otherPlayer:player];
         if ([setScore shouldPlayATieBreaker]){
             TieBreaker *tiebreaker = [[TieBreaker alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
-            [setScore addTieScore: (TieBreakerScore *)[tiebreaker play:(player)]];
+            [setScore addTieBreakerScore: (TieBreakerScore *)[tiebreaker play:(player)]];
             break;
         }
     }

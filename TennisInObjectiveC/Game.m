@@ -14,7 +14,7 @@
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2
 {
-    if( (self = [super initWithFirstPlayer:p1 secondPlayer:p2] ) == nil )
+    if((self = [super initWithFirstPlayer:p1 secondPlayer:p2]) == nil )
         return nil;
     return self;
 }
@@ -22,12 +22,11 @@
 -(Score *) play:(Player *)player
 {
     
-    Score *gameScore = [[GameScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
+    GameScore *gameScore = [[GameScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
     
     while(![gameScore haveAWinner]) {
-        PointScore *pScore =  (PointScore *) [player serveAPoint];
-        [gameScore addScore: [pScore getWinner]];
-        pScore = nil;
+        PointScore *pointScore =  (PointScore *)[player serveAPoint];
+        [gameScore addScore: [pointScore getWinner]];
     }
     
     return gameScore;

@@ -11,8 +11,6 @@
 
 @implementation SetScore
 
-
-
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2{
     if((self = [super initWithFirstPlayer:p1 secondPlayer:p2]) == nil)
         return nil;
@@ -27,16 +25,15 @@
     return (self.player1Score == 6 && self.player2Score == 6);
 }
 
--(void) addTieScore: (TieBreakerScore *) score{
-    addScore: [score getWinner];
+-(void) addTieBreakerScore: (TieBreakerScore *) score{;
+    [self addScore: [score getWinner]];
     self.tieScore = score;
 }
 
 -(NSString *) description{
     NSLog(@"%d         %d           ",self.player1Score, self.player2Score);
-    if( self.tieScore != nil)
+    if(self.tieScore != nil)
         NSLog(@"%@",[self.tieScore description]);
-    
     return 0;
 }
 

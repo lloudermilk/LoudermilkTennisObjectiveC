@@ -23,7 +23,8 @@
 }
 
 -(NSString *) description{
-    return [NSString stringWithFormat:@"\n\n(tie breaker %d - %d)\n\n", self.player1Score, self.player2Score ];
+    NSLog(@"\t    (tie breaker %d - %d)", self.player1Score, self.player2Score);
+    return 0;
 }
 
 @end

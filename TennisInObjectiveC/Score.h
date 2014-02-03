@@ -19,6 +19,7 @@
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2;
 -(BOOL) areTied;
+-(NSString *) descriptions;
 -(void) addScore: (Player *) p;
 -(Player *)getWinner;
 

@@ -15,7 +15,7 @@
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2;
 @property (nonatomic) TieBreakerScore *tieScore;
 -(BOOL) haveAWinner;
--(void) addTieScore: (TieBreakerScore *) score;
+-(void) addTieBreakerScore: (TieBreakerScore *) score;
 -(BOOL) shouldPlayATieBreaker;
 -(NSString *) description;
 
