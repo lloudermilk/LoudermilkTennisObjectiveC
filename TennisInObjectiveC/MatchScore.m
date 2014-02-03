@@ -29,19 +29,20 @@
 }
 
 -(NSString *) description{
-    NSLog(@"   Set No.    Player A     Player B\n");
-    for( int i = 0; i < _setNumber; i++ )
-    {
-        NSLog(@"%7d", i+1);
-        [self.scores[i] description];
-        NSLog(@"\n");
+    NSLog(@"   Set No.    Player A          Player B\n");
+    
+    for( int i = 0; i < _setNumber; i++ ) {
+        NSLog(@"%d", i+1);
+        [_scores[i] description];
     }
     
-    if (self.player1Score > self.player2Score)
-        NSLog(@"\nPlayer A wins the match %d sets to %d\n.", self.player1Score, self.player2Score);
-    else
-        NSLog(@"\nPlayer B wins the match %d sets to %d\n.", self.player2Score, self.player1Score);
+    if ( self.player1Score > self.player2Score ) {
+        NSLog(@"\nPlayer A wins the match %d sets to %d \n", self.player1Score, self.player2Score);
+    }
     
+    else{
+        NSLog(@"\nPlayer B wins the match %d sets to %d \n", self.player2Score, self.player1Score);
+    }
     return 0;
 }
 
