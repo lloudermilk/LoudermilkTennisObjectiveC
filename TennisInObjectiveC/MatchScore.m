@@ -19,11 +19,8 @@
 }
 
 -(void) addScore: (Score *) score{
-    [scores addObject: (SetScore *)score];
-    if([score getWinner] == [self player1])
-        self.player1Score++;
-    else
-        self.player2Score++;
+    [self.scores addObject: (SetScore *)score];
+    score.getWinner == self.player1 ? self.player1Score++ : self.player2Score++;
     self.setNumber++;
 }
 
@@ -36,7 +33,7 @@
     for( int i = 0; i < _setNumber; i++ )
     {
         NSLog(@"%7d", i+1);
-        [scores[i] description];
+        [self.scores[i] description];
         NSLog(@"\n");
     }
     
