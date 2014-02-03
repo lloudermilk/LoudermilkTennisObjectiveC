@@ -10,25 +10,21 @@
 #import "SetScore.h"
 #import "Score.h"
 
-
-@interface MatchScore()
-@property (nonatomic) int setNumber;
-@end
-
-SetScore *scores[5];
-
 @implementation MatchScore
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2{
-    if( (self = [super initWithFirstPlayer:p2 secondPlayer:p2   ]) == nil)
+    if((self = [super initWithFirstPlayer:p2 secondPlayer:p2]) == nil)
         return nil;
     return self;
 }
 
 -(void) addScore: (Score *) score{
-    scores[_setNumber] = (SetScore*)score;
-    _setNumber++;
-    [score getWinner] == self.player1 ? self.player1Score++ : self.player2Score++;
+    [scores addObject: (SetScore *)score];
+    if([score getWinner] == [self player1])
+        self.player1Score++;
+    else
+        self.player2Score++;
+    self.setNumber++;
 }
 
 -(BOOL) haveAWinner{

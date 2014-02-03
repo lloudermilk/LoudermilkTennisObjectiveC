@@ -15,7 +15,7 @@
 @implementation Match
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer:(Player *) p2{
-    if( (self = [super initWithFirstPlayer:p1 secondPlayer:p2] ) == nil )
+    if((self = [super initWithFirstPlayer:p1 secondPlayer:p2]) == nil )
         return nil;
     return self;
 }

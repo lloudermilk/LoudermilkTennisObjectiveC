@@ -12,6 +12,8 @@
 @interface TieBreakerScore : Score
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2;
+-(BOOL) haveAWinner;
+-(NSString *) description;
 
 
 @end

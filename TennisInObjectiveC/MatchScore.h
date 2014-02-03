@@ -12,5 +12,10 @@
 
 -(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2;
 -(void) addScore: (Score *) score;
+-(BOOL) haveAWinner;
+-(NSString *) description;
+
+@property (nonatomic) NSMutableArray* scores;
+@property (nonatomic) int setNumber;
 
 @end

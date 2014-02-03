@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Ali Kooshesh. All rights reserved.
 //
 
-
 #import "TieBreakerScore.h"
 #import "Score.h"
 #import "Player.h"

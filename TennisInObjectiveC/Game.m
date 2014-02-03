@@ -24,7 +24,7 @@
     
     Score *gameScore = [[GameScore alloc] initWithFirstPlayer:self.player1 secondPlayer:self.player2];
     
-    while( ! [gameScore haveAWinner] ) {
+    while(![gameScore haveAWinner]) {
         PointScore *pScore =  (PointScore *) [player serveAPoint];
         [gameScore addScore: [pScore getWinner]];
         pScore = nil;

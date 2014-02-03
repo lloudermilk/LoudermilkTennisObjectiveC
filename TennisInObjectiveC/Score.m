@@ -10,8 +10,7 @@
 
 @implementation Score
 
--(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2;
-{
+-(instancetype) initWithFirstPlayer: (Player *) p1 secondPlayer: (Player *) p2;{
     if( (self = [super init]) == nil )
         return nil;
     
@@ -20,33 +19,28 @@
     return self;
 }
 
-
--(Player *)getWinner
-{
+-(Player *)getWinner{
     return self.player1Score > self.player2Score ? self.player1 : self.player2;
 }
 
--(BOOL) areTied
-{
+-(BOOL) areTied{
     return self.player1Score == self.player2Score;
 }
 
--(void) addScore: (Player *) p
-{
+-(void) addScore: (Player *) p{
     p == self.player1 ? self.player1Score++ : self.player2Score++;
 }
 
--(BOOL) haveAWinner
-{
+-(BOOL) haveAWinner{
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
+    reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
                                  userInfo:nil];
 }
 
--(NSString *) description
-{
+-(NSString *) description{
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
+    reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
                                  userInfo:nil];
 }
+
 @end
