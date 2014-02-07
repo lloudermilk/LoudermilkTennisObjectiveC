@@ -22,7 +22,7 @@
 static int playersIdx = 0;
 static Player *players[2];
 int MAX_PLAYERS = 2;
-BOOL debug = YES;
+BOOL debug = NO;
 
 @implementation Player
 

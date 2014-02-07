@@ -16,7 +16,9 @@
 -(BOOL) haveAWinner;
 -(NSString *) description;
 
+//Array for the scores of each scores
 @property (nonatomic) NSMutableArray* scores;
+//holds the number of sets played, used to print
 @property (nonatomic) int setNumber;
 
 @end
